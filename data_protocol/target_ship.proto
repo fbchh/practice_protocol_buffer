@@ -1,0 +1,30 @@
+/*
+    "name": "考斯彭号",
+    "id": "CG-63",
+    "start_time": "1991年3月9日",
+    "ship_length": 172.82,
+    "ship_width": NumberInt("20"),
+    "engine_conf": "四台通用电气LM 2500燃气涡轮发动机,2个推进轴",
+    "water_discharge": "9600",
+    "ship_speed": "(max)>30",
+    "weapon_conf": "MK41垂直发射系统标准导弹(MR);垂直发射 ASROC (VLA) 导弹;战斧巡航导弹;六枚 MK 46 鱼雷;两门 MK 45 5 英寸/54 口径轻型火炮;两个方阵近战武器系统",
+    "ship_aircraft_conf": "两架 SH-60 海鹰",
+    "defense_radius": NumberInt("30000"),
+    "attack_radius": NumberInt("10000")
+*/
+syntax = "proto3";
+
+message TargetShip {
+    string name = 1;//船名
+    string id = 2;//船id
+    string start_name = 3;//下水时间
+    float ship_length = 4;//船长
+    int32 ship_width = 5;//船宽
+    string engine_conf = 6;//引擎配置
+    string water_discharge = 7;//吃水线
+    string ship_speed = 8;//船速
+    string weapon_conf = 9;//武器配置
+    string ship_aircraft_conf = 10;//舰载机配置
+    int32 defense_radius = 11;//防御半径
+    int32 attack_radius = 12;//攻击半径
+}

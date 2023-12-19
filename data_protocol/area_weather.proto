@@ -1,0 +1,66 @@
+/*
+{
+        result: {
+            location: {
+                areacode: '123456789', //区域ID
+                name: '台海地区', //区域中文名
+                country: '中国', //所属国家中文名
+            },
+            realtime: {
+                text: '晴天', //天气现象，string类型
+                code: '01', //天气现象编码，string类型
+                temp: 22.5, //气温，单位℃，double类型
+                feels_like: 6, //体感温度，单位℃，int类型
+                rh: 38, //相对湿度，单位%，int类型
+                wind_class: '2级', //蒲福氏风级，string类型
+                wind_speed: 2.5, //风速，单位m/s，double类型
+                wind_dir: '南风', //风向，string类型
+                wind_angle: 187, //风向角度，0表示正北，180表示正南，int类型
+                prec: 0.0, //过去1小时降水量，单位毫米(mm)，double类型
+                clouds: 10, //云量，单位%，int类型
+                vis: 12085, //能见度，单位米(m)，int类型
+                pressure: 1020, //气压，单位百帕(hPa)，int类型
+                dew: -6, //露点温度，单位℃，int类型
+                uv: 2, //紫外线指数，int类型
+                snow: 0.0, //降雪量，单位厘米(cm)，double类型 #国内城市不支持#
+                // weight: 0, //文案权重，int类型
+                // brief: '今日惊蛰', //天气短文案，string类型
+                // detail: '今日惊蛰，春雷惊百虫', //天气长文案 ，string类型
+            },
+            last_update: '2021-03-05 19:07:44', //数据更新时间(北京时间)
+        },
+    }
+*/
+syntax = "proto3";
+
+message Weather {
+    message Result {
+        message Location {
+            string areacode = 1;//区域id
+            string name = 2;//区域名
+            string country = 3;//所属国家
+        }
+        message Realtime {
+            string text = 1;//天气现象
+            string code = 2;//天气现象编码
+            float temp = 3;//气温
+            int32 feels_like = 4;//体感温度
+            int32 rh = 5;//相对湿度
+            string wind_class = 6;//蒲福氏风级
+            float wind_speed = 7;//风速，单位m/s
+            string wind_dir = 8;//风向
+            int32 wind_angle = 9;//风向角度，0表示正北，180表示正南
+            float prec = 10;//过去1小时降水量，单位毫米(mm)
+            int32 clouds = 11;//云量，单位%
+            int64 vis = 12;//能见度，单位米(m)
+            sint64 pressure = 13;//气压，单位百帕(hPa)
+            float dew = 14;//露点温度，单位℃
+            int32 uv = 15;//紫外线指数
+            float snow = 16;//降雪量，单位厘米(cm)
+//            int32 weight = 17;//文案权重
+        }
+        Realtime realtime = 1;
+        Location location = 2;
+    }
+    Result result = 1;
+}

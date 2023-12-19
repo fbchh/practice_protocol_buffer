@@ -1,0 +1,15 @@
+{
+  "name": "TS_proj_pb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./protocolbuffer_tst/pb_tst.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protobufjs": "^7.2.5"
+  }
+}

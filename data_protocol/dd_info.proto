@@ -1,0 +1,58 @@
+/*
+{
+    "timer": NumberInt("0"),
+    "isCurrent": true,
+    "standpoint": NumberInt("1"),
+    "type": "dd",
+    "name": "dd_1",
+    "canvas_width": NumberInt("1920"),
+    "canvas_height": NumberInt("938"),
+    "width": NumberInt("640"),
+    "height": NumberInt("640"),
+    "aspectRatio": 2.04690831556503,
+    "fov": 1.0471975511966,
+    "near": 0.1,
+    "far": 10000000000,
+    "fovy": 0.549835209186167,
+    "x": -2766556.62165462,
+    "y": 5095363.44032656,
+    "z": 2648920.14018392,
+    "heading": 165.011911701873,
+    "pitch": 0.0875856358380318,
+    "roll": 1.2467265462588e-09,
+    "id": NumberInt("1"),
+    "executor": NumberInt("0"),
+    "allocatorType": "",
+    "matters": 0.3,
+    "speed": NumberInt("1000")
+}
+*/
+syntax = "proto3";
+
+message DdInfo {
+    int32 timer = 1;
+    bool isCurrent = 2;
+    int32 standpoint = 3;
+    string type = 4;
+    string name = 5;
+    int32 canvas_width = 6;
+    int32 canvas_height = 7;
+    int32 width = 8;
+    int32 height = 9;
+    float aspectRatio = 10;
+    float fov = 11;
+    float near = 12;
+    float far = 13;
+    float fovy = 14;
+    float x = 15;
+    float y = 16;
+    float z = 17;
+    float heading = 18;
+    float pitch = 19;
+    float roll = 20;
+    int32 id = 21;
+    int32 executor = 22;
+    string allocatorType = 23;
+    float matters = 24;
+    int32 speed = 25;
+}
